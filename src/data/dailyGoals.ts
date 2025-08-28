@@ -2,63 +2,42 @@ import { DailyGoal } from '../types';
 
 // Générateur de quêtes quotidiennes réalistes et réalisables
 export const generateDailyGoals = (): DailyGoal[] => {
-  const today = new Date();
-  const dayOfWeek = today.getDay();
-  
-  // Base d'objectifs quotidiens variés
-  const goalPool = [
+  // Base élargie d'objectifs quotidiens variés
+  const goalPool: DailyGoal[] = [
     // Entraînement
-    { id: 'warmup-session', text: 'Faire une séance d\'échauffement de 10 minutes', type: 'training', target: 1, xpReward: 50 },
-    { id: 'strength-session', text: 'Compléter une séance de renforcement', type: 'training', target: 1, xpReward: 75 },
-    { id: 'stretch-session', text: 'Faire 15 minutes d\'étirements', type: 'training', target: 15, xpReward: 60 },
-    { id: 'custom-workout', text: 'Créer et faire son propre programme', type: 'training', target: 1, xpReward: 80 },
-    { id: 'complete-exercises', text: 'Terminer 5 exercices différents', type: 'training', target: 5, xpReward: 40 },
+    { id: 'warmup-session', text: 'Faire une séance d\'échauffement', type: 'training', target: 1, current: 0, completed: false, xpReward: 50 },
+    { id: 'strength-session', text: 'Compléter une séance de renforcement', type: 'training', target: 1, current: 0, completed: false, xpReward: 75 },
+    { id: 'stretch-session', text: 'Faire 15 minutes d\'étirements', type: 'training', target: 15, current: 0, completed: false, xpReward: 60 },
+    { id: 'custom-workout', text: 'Créer son propre programme d\'entraînement', type: 'training', target: 1, current: 0, completed: false, xpReward: 80 },
+    { id: 'complete-exercises', text: 'Terminer 5 exercices différents', type: 'training', target: 5, current: 0, completed: false, xpReward: 40 },
+    { id: 'training-generator', text: 'Utiliser le générateur de programme', type: 'training', target: 1, current: 0, completed: false, xpReward: 60 },
+    { id: 'random-workout', text: 'Essayer une séance surprise', type: 'training', target: 1, current: 0, completed: false, xpReward: 70 },
     
     // Apprentissage
-    { id: 'read-article', text: 'Lire un article de documentation', type: 'learning', target: 1, xpReward: 30 },
-    { id: 'study-technique', text: 'Étudier 2 techniques d\'escalade', type: 'learning', target: 2, xpReward: 45 },
-    { id: 'gear-research', text: 'Consulter la section matériel', type: 'learning', target: 1, xpReward: 25 },
+    { id: 'read-article', text: 'Lire un article de documentation', type: 'learning', target: 1, current: 0, completed: false, xpReward: 30 },
+    { id: 'study-technique', text: 'Étudier les techniques d\'escalade', type: 'learning', target: 1, current: 0, completed: false, xpReward: 45 },
+    { id: 'gear-research', text: 'Consulter la section matériel', type: 'learning', target: 1, current: 0, completed: false, xpReward: 25 },
+    { id: 'equipment-store', text: 'Explorer la boutique d\'équipement', type: 'learning', target: 1, current: 0, completed: false, xpReward: 35 },
+    { id: 'learn-safety', text: 'Lire un article sur la sécurité', type: 'learning', target: 1, current: 0, completed: false, xpReward: 40 },
+    { id: 'nutrition-guide', text: 'Consulter les conseils nutrition', type: 'learning', target: 1, current: 0, completed: false, xpReward: 30 },
     
     // Exploration
-    { id: 'find-gym', text: 'Découvrir une nouvelle salle sur la carte', type: 'exploration', target: 1, xpReward: 35 },
-    { id: 'plan-session', text: 'Planifier sa prochaine sortie escalade', type: 'exploration', target: 1, xpReward: 20 },
+    { id: 'find-gym', text: 'Découvrir une nouvelle salle sur la carte', type: 'exploration', target: 1, current: 0, completed: false, xpReward: 35 },
+    { id: 'visit-map', text: 'Explorer la carte des salles d\'escalade', type: 'exploration', target: 1, current: 0, completed: false, xpReward: 25 },
+    { id: 'call-gym', text: 'Contacter une salle d\'escalade', type: 'exploration', target: 1, current: 0, completed: false, xpReward: 30 },
+    { id: 'plan-route', text: 'Planifier un itinéraire vers une salle', type: 'exploration', target: 1, current: 0, completed: false, xpReward: 20 },
     
     // Progression
-    { id: 'check-progress', text: 'Consulter ses statistiques de progression', type: 'progress', target: 1, xpReward: 15 },
-    { id: 'complete-quest', text: 'Terminer 3 quêtes aujourd\'hui', type: 'progress', target: 3, xpReward: 100 }
+    { id: 'check-progress', text: 'Consulter ses statistiques de progression', type: 'progress', target: 1, current: 0, completed: false, xpReward: 15 },
+    { id: 'view-badges', text: 'Consulter ses badges et succès', type: 'progress', target: 1, current: 0, completed: false, xpReward: 20 },
+    { id: 'check-history', text: 'Revoir l\'historique de ses séances', type: 'progress', target: 1, current: 0, completed: false, xpReward: 15 },
+    { id: 'complete-quests', text: 'Terminer 2 autres quêtes aujourd\'hui', type: 'progress', target: 2, current: 0, completed: false, xpReward: 80 },
+    { id: 'daily-login', text: 'Se connecter à l\'application', type: 'progress', target: 1, current: 0, completed: false, xpReward: 10 }
   ];
 
-  // Sélection intelligente selon le jour de la semaine
-  let selectedGoals: DailyGoal[] = [];
-  
-  if (dayOfWeek === 1) { // Lundi - Motivation
-    selectedGoals = [
-      { ...goalPool[0], completed: false, current: 0 }, // Échauffement
-      { ...goalPool[5], completed: false, current: 0 }, // Article
-      { ...goalPool[8], completed: false, current: 0 }, // Nouvelle salle
-      { ...goalPool[10], completed: false, current: 0 } // Progression
-    ];
-  } else if (dayOfWeek === 3) { // Mercredi - Force
-    selectedGoals = [
-      { ...goalPool[1], completed: false, current: 0 }, // Renforcement
-      { ...goalPool[4], completed: false, current: 0 }, // 5 exercices
-      { ...goalPool[6], completed: false, current: 0 }, // Techniques
-      { ...goalPool[9], completed: false, current: 0 } // Planification
-    ];
-  } else if (dayOfWeek === 5) { // Vendredi - Récupération
-    selectedGoals = [
-      { ...goalPool[2], completed: false, current: 0 }, // Étirements
-      { ...goalPool[7], completed: false, current: 0 }, // Matériel
-      { ...goalPool[5], completed: false, current: 0 }, // Article
-      { ...goalPool[11], completed: false, current: 0 } // Quêtes
-    ];
-  } else { // Autres jours - Mixte
-    const randomGoals = goalPool
-      .sort(() => Math.random() - 0.5)
-      .slice(0, 4)
-      .map(goal => ({ ...goal, completed: false, current: 0 }));
-    selectedGoals = randomGoals;
-  }
+  // Sélection aléatoire de 6 objectifs quotidiens
+  const shuffled = goalPool.sort(() => Math.random() - 0.5);
+  const selectedGoals = shuffled.slice(0, 6);
 
   return selectedGoals;
 };

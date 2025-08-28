@@ -16,7 +16,7 @@ export const climbingEquipment: Equipment[] = [
       'Système de fermeture velcro',
       'Talon renforcé pour les crochets'
     ],
-    image: 'https://images.pexels.com/photos/3768/rock-climbing-shoes-sports.jpg',
+    image: 'https://images.pexels.com/photos/1598300/pexels-photo-1598300.jpeg',
     buyLink: 'https://www.decathlon.fr/p/chaussons-escalade-scarpa-instinct/_/R-p-123456',
     rating: 4.8,
     difficulty: 'advanced',
@@ -36,7 +36,7 @@ export const climbingEquipment: Equipment[] = [
       'Lacets pour ajustement précis',
       'Semelle FriXion RS'
     ],
-    image: 'https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg',
+    image: 'https://images.pexels.com/photos/1598300/pexels-photo-1598300.jpeg',
     buyLink: 'https://www.decathlon.fr/p/chaussons-escalade-la-sportiva/_/R-p-789012',
     rating: 4.5,
     difficulty: 'beginner',
@@ -56,7 +56,7 @@ export const climbingEquipment: Equipment[] = [
       'Fermeture velcro pratique',
       'Talon précis'
     ],
-    image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg',
+    image: 'https://images.pexels.com/photos/1598300/pexels-photo-1598300.jpeg',
     buyLink: 'https://www.decathlon.fr/p/chaussons-escalade-five-ten/_/R-p-345678',
     rating: 4.7,
     difficulty: 'intermediate',
@@ -78,7 +78,7 @@ export const climbingEquipment: Equipment[] = [
       'Boucle DoubleBack',
       'Léger et résistant'
     ],
-    image: 'https://images.pexels.com/photos/1809644/pexels-photo-1809644.jpeg',
+    image: 'https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg',
     buyLink: 'https://www.decathlon.fr/p/baudrier-petzl-adjama/_/R-p-111222',
     rating: 4.6,
     difficulty: 'intermediate',
@@ -98,7 +98,7 @@ export const climbingEquipment: Equipment[] = [
       '2 porte-matériel',
       'Rapport qualité-prix excellent'
     ],
-    image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg',
+    image: 'https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg',
     buyLink: 'https://www.decathlon.fr/p/baudrier-black-diamond/_/R-p-333444',
     rating: 4.3,
     difficulty: 'beginner',
@@ -120,7 +120,7 @@ export const climbingEquipment: Equipment[] = [
       'Absorption optimale',
       'Packaging refermable'
     ],
-    image: 'https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg',
+    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg',
     buyLink: 'https://www.decathlon.fr/p/magnesie-black-diamond/_/R-p-555666',
     rating: 4.4,
     difficulty: 'beginner',
@@ -140,7 +140,7 @@ export const climbingEquipment: Equipment[] = [
       'Ceinture incluse',
       'Boucle porte-brosse'
     ],
-    image: 'https://images.pexels.com/photos/1809644/pexels-photo-1809644.jpeg',
+    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg',
     buyLink: 'https://www.decathlon.fr/p/sac-magnesie-petzl/_/R-p-777888',
     rating: 4.5,
     difficulty: 'beginner',
@@ -162,7 +162,7 @@ export const climbingEquipment: Equipment[] = [
       'Traitement Dry',
       'Marquage milieu'
     ],
-    image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg',
+    image: 'https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg',
     buyLink: 'https://www.decathlon.fr/p/corde-mammut-infinity/_/R-p-999000',
     rating: 4.7,
     difficulty: 'intermediate',
@@ -184,7 +184,7 @@ export const climbingEquipment: Equipment[] = [
       'Réglage précis',
       'Certification CE/UIAA'
     ],
-    image: 'https://images.pexels.com/photos/1809644/pexels-photo-1809644.jpeg',
+    image: 'https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg',
     buyLink: 'https://www.decathlon.fr/p/casque-petzl-meteor/_/R-p-111333',
     rating: 4.6,
     difficulty: 'intermediate',
@@ -206,7 +206,7 @@ export const climbingEquipment: Equipment[] = [
       'Doigt courbe ergonomique',
       'Léger et résistant'
     ],
-    image: 'https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg',
+    image: 'https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg',
     buyLink: 'https://www.decathlon.fr/p/degaine-petzl-djinn/_/R-p-222444',
     rating: 4.5,
     difficulty: 'intermediate',
@@ -228,7 +228,7 @@ export const climbingEquipment: Equipment[] = [
       'Descente contrôlée',
       'Robuste et fiable'
     ],
-    image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg',
+    image: 'https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg',
     buyLink: 'https://www.decathlon.fr/p/assureur-petzl-grigri/_/R-p-555777',
     rating: 4.8,
     difficulty: 'intermediate',
