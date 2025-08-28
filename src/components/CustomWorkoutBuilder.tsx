@@ -18,7 +18,7 @@ const CustomWorkoutBuilder: React.FC<CustomWorkoutBuilderProps> = ({
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [difficultyFilter, setDifficultyFilter] = useState<string>('all');
 
-  const allExercises = [...exercises.warmup, ...exercises.strength, ...exercises.stretching];
+  const allExercises = [...(exercises.warmup || []), ...(exercises.strength || []), ...(exercises.stretching || [])];
 
   const filteredExercises = allExercises.filter(exercise => {
     const matchesSearch = exercise.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
