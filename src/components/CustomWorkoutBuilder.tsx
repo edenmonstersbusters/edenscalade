@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Plus, Trash2, Play, Clock, Zap, Save, Search, Filter } from 'lucide-react';
-import { Exercises } from '../data/exercises';
+import { exercises } from '../data/exercises';
 import { Exercise, CustomWorkout } from '../types';
 
 interface CustomWorkoutBuilderProps {
